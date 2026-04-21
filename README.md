@@ -31,37 +31,51 @@ Embeddings are stored permanently in Pinecone cloud database.
 | python-dotenv | Environment variable management |
 
 ## Project Structure
+```
 vector-menu-search/
 │
 ├── env/
 ├── main.py
 ├── .env
 └── requirements.txt
+```
 
 ## Setup
 
 1. Clone the repository
+```
 git clone https://github.com/yourusername/vector-menu-search
+```
 
 2. Create and activate virtual environment
+```
 python -m venv env
 env\Scripts\activate
+```
 
 3. Install dependencies
+```
 pip install -r requirements.txt
 pip install sentence-transformers
+```
 
 4. Create `.env` file and add your API keys
+```
 API_KEY=your_groq_api_key
 PINECONE_API_KEY=your_pinecone_api_key
+```
 
 5. Run the server
+```
 uvicorn main:app --reload
+```
 
 ## API Endpoints
 
 ### POST /search
+```
 Basic semantic search — returns top 3 results with similarity scores.
+```
 
 **Request:**
 ```json
@@ -124,6 +138,7 @@ Full RAG endpoint — AI answers using retrieved menu context.
 ```
 
 ## How It Works
+```
 Menu documents with metadata
 ↓
 HuggingFace converts to 384 dimension embeddings
@@ -141,6 +156,7 @@ Optional metadata filters applied
 Relevant chunks sent to AI as context
 ↓
 AI generates accurate answer
+```
 
 ## Metadata Schema
 
@@ -171,15 +187,17 @@ Each menu item stored with:
 ```
 
 ## Similarity Scores
-
+```
 Pinecone uses cosine similarity — higher is better:
 0.8 - 1.0  →  very relevant
 0.5 - 0.8  →  relevant
 0.0 - 0.5  →  somewhat related
-
+```
 ## Environment Variables
+```
 API_KEY=your_groq_api_key
 PINECONE_API_KEY=your_pinecone_api_key
+```
 
 ## Notes
 
