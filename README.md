@@ -73,9 +73,8 @@ uvicorn main:app --reload
 ## API Endpoints
 
 ### POST /search
-```
+
 Basic semantic search — returns top 3 results with similarity scores.
-```
 
 **Request:**
 ```json
@@ -206,3 +205,7 @@ PINECONE_API_KEY=your_pinecone_api_key
 - Pinecone free tier — 1 index, 2GB storage, no credit card
 - Re-embedding only happens if Pinecone index is empty
 - Menu updated by modifying menu_documents in main.py
+
+## 👤 Author
+
+**Ohm Parkash** — [LinkedIn](https://www.linkedin.com/in/om-parkash34/) · [GitHub](https://github.com/parkash34)
