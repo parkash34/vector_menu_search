@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+langchain-groq
+langchain-core
+langchain-community
+langchain-pinecone
+langchain-huggingface
+pinecone-client
+sentence-transformers
